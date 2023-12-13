@@ -1,6 +1,6 @@
 node {
 
-   def registryProjet='tibo-app/'
+   def registryProjet='forma-tibo/'
    def IMAGE="${registryProjet}app:1.0"
 
     stage('Clone') {
