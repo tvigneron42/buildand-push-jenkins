@@ -1,7 +1,7 @@
 node {
 
-   def registryProjet='ludo-app/'
-   def IMAGE="${registryProjet}app:${version}"
+   def registryProjet='tibo-app/'
+   def IMAGE="${registryProjet}app:1.0"
 
     stage('Clone') {
           checkout scm
@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push') {
-       docker.withRegistry('https://registry.ludovic.io/' , 'harbor_id') {
+       docker.withRegistry('https://registry.ludovic.io/' , 'tibo_id') {
               img.push 'latest'
               img.push()
           }
